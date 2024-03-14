@@ -2,7 +2,6 @@ import React from "react";
 import LOGO from "./../../images/logo.png";
 import CART from "./../../images/cart.svg";
 import BaniereHome from "./../../images/baniereHome.jpg"; // Importa la imagen de fondo
-import { Outlet } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -38,13 +37,16 @@ export default function Navbar() {
         </div>
       </div>
       <div className="h-[600px] bg-no-repeat bg-cover mt-[-2rem] flex justify-center items-center relative">
-        <img src={BaniereHome} alt="Banière" className="absolute inset-0 w-full h-full object-cover filter brightness-50" />
+        <img
+          src={BaniereHome}
+          alt="Banière"
+          className="absolute inset-0 w-full h-full object-cover filter brightness-50"
+        />
         <div className="text-center text-white absolute ">
-          <h1 className="text-7xl shadow-lg font-serif ">Al volo Pizza</h1>
+          <h1 className="text-7xl shadow-lg font-serif ">Al volo Pizza</h1> 
           <p className="text-lg">En un clin d'œil, un régal !</p>
         </div>
       </div>
-      <Outlet />
     </>
   );
 }
