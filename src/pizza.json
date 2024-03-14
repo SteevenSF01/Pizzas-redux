@@ -11,42 +11,42 @@
       "nom": "olives",
       "ingredients": ["olives", "poivrons", "sauce tomate" , "mozzarella"],
       "description": "Olives vertes et noir, poivrons, mozzarella sur un base de sauce tomate",
-      "prix": 10,
+      "prix": 14,
       "image": "olives.jpg"
     },
     {
       "nom": "pepperoni",
       "ingredients": ["pepperoni","mozzarella", "sauce tomate"],
       "description" : "Pizza à base de pepperoni et mozarrella" ,
-      "prix": 10,
+      "prix": 12,
       "image": "pepperoni.jpg"
     },
     {
       "nom": "barbecue",
       "ingredients": [ "boeuf", "cornichon", "oignon" , "mozzarella" , "sauce barbecue"],
       "description": "Double portion de viande de boeuf épicée, tranches de cornichon, oignons rouges, mozzarella et sauce barbecue",
-      "prix": 10,
+      "prix": 15,
       "image": "bbq.jpg"
     },
     {
       "nom": "4 fromages",
       "ingredients": ["emmental" , "fromage chevre" , "camembert" , "mozzarella", "sauce tomate"],
       "description": "Emmental, fromage de chèvre, camembert, mozzarella et crème épaisse",
-      "prix": 10,
+      "prix": 13,
       "image": "4fromages.jpg"
     },
     {
       "nom": "piment",
       "ingredients":["poulet" , "poivrons", "oignon", "mozzarella", "sauce barbecue" ],
       "description" :"Dés de poulet grillé, poivrons verts, oignons rouges, mozzarella et sauce barbecue",
-      "prix": 10,
+      "prix": 15,
       "image": "barbecuechicken.jpg"
     },
     {
       "nom": "pick & mix",
       "ingredients": "??? ",
       "description": "Devenez le chef cuisto et composez votre pizza: sauce tomate, mozzarella +3 garnitures au choix.",
-      "prix": 12,
+      "prix": 11,
       "image": "pickandmix.jpg"
     }
   ]

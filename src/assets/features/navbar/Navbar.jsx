@@ -43,7 +43,7 @@ export default function Navbar() {
           className="absolute inset-0 w-full h-full object-cover filter brightness-50"
         />
         <div className="text-center text-white absolute ">
-          <h1 className="text-7xl shadow-lg font-serif ">Al volo Pizza</h1> 
+          <h1 className="text-7xl shadow-lg font-serif ">Al volo Pizza</h1>
           <p className="text-lg">En un clin d'œil, un régal !</p>
         </div>
       </div>
