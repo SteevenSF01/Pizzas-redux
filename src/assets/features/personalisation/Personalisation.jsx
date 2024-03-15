@@ -3,16 +3,6 @@ import DATA from "./../../../pizza.json";
 import PICk from "./../../images/pickandmix.jpg";
 
 export default function Personalisation() {
-  let choixIngredients = new Set();
-
-  DATA.pizzas.forEach((pizza) => {
-    pizza.ingredients.forEach((ingredient) => {
-      choixIngredients.add(ingredient);
-    });
-  });
-
-  let ingredientsArray = Array.from(choixIngredients);
-  ingredientsArray.pop();
 
   return (
     <>
@@ -22,21 +12,21 @@ export default function Personalisation() {
         </h2>
         <div className="w-[80%] shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-5 rounded-xl flex justify-between  flex-wrap lg:flex-nowrap">
           <ul className="w-full flex flex-col gap-y-2">
-            {ingredientsArray.map((ingredient, index) => (
+            {DATA.ingredients.map((ingredient, index) => (
               <div
                 key={index}
-                className="flex justify-between w-full lg:w-[60%] capitalize "
+                className="flex justify-between w-full lg:w-[70%] capitalize "
               >
-                {ingredient}
-                <div className="w-fit h-fit flex gap-x-3 items-center ">
+                {ingredient.nom}
+                <div className="w-[40%] h-fit flex flex-wrap md:flex-nowrap gap-x-3 items-center justify-start ">
                   <button className="size-7 bg-gray-600 cursor-pointer flex justify-center items-center text-white rounded-full text-lg">
-                    {" "}
-                    +{" "}
-                  </button>{" "}
-                  <span className=" text-lg"> 0 </span>{" "}
+                    +
+                  </button>
+                  <span className=" text-lg"> 0 </span>
                   <button className="size-7 bg-gray-600 cursor-pointer flex justify-center items-center text-white rounded-full text-lg">
                     -
                   </button>
+                <p className="text-gray-700 text-lg ms-3">prix: <span className="text-sm">{ingredient.prix} € </span></p>
                 </div>
               </div>
             ))}

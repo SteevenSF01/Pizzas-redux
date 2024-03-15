@@ -21,7 +21,7 @@ function App() {
           element: <Details />
         },
         {
-          path: "/Pizzas-redux/Personalisation/:idPizza",
+          path: "/Pizzas-redux/Personalisation/",
           element: <Personalisation />
         }
       ],

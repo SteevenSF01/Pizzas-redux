@@ -67,5 +67,59 @@
       "prix": 11,
       "image": "pickandmix.jpg"
     }
+  ],
+  "ingredients": [
+    {
+      "nom": "Mozzarella",
+      "prix": 0.5
+    },
+    {
+      "nom": "Sauce Tomate",
+      "prix": 1
+    },
+    {
+      "nom": "Olives",
+      "prix": 1.5
+    },
+    {
+      "nom": "Poivrons",
+      "prix": 1
+    },
+    {
+      "nom": "Pepperoni",
+      "prix": 2
+    },
+    {
+      "nom": "Boeuf",
+      "prix": 1.5
+    },
+    {
+      "nom": "Cornichon",
+      "prix": 0.8
+    },
+    {
+      "nom": "Oignon",
+      "prix": 0.5
+    },
+    {
+      "nom": "Sauce Barbecue",
+      "prix": 1.8
+    },
+    {
+      "nom": "Emmental",
+      "prix": 1.5
+    },
+    {
+      "nom": "Fromage Chevre",
+      "prix": 2
+    },
+    {
+      "nom": "Camembert",
+      "prix": 2.5
+    },
+    {
+      "nom": "Poulet",
+      "prix": 1.5
+    }
   ]
 }
