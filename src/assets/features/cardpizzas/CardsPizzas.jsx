@@ -7,8 +7,6 @@ import { ajoutPanier } from "../cart/cartSlice";
 export default function CardsPizzas() {
   const dispatch = useDispatch();
 
-  const produits = useSelector((state)=> state.cart.produits)
-
   return (
     <>
     <div className="flex items-center mt-5 ms-5 gap-3">

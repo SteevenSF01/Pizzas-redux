@@ -8,8 +8,13 @@ const cartSlice = createSlice({
     name : 'cart',
     initialState,
     reducers : {
-        ajoutPanier : (state,action) => {
-            state.produits.push(action.payload)
+        ajoutPanier : (state, action) => {
+            const existingProductIndex = state.produits.findIndex(product => product.id === action.payload.id);
+            if (existingProductIndex !== -1) {
+                state.produits[existingProductIndex].total += 1;
+            } else {
+                state.produits.push(action.payload);
+            }
         },
         ajoutQuantite: (state, action) => {
             const index = state.produits.findIndex(product => product.id === action.payload.id);
