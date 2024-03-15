@@ -44,7 +44,7 @@ export default function Navbar() {
             aria-label="close sidebar"
             className="drawer-overlay w-[98%] "
           ></label>
-          <section className="menu p-4 w-96 min-h-full bg-base-200 text-base-content">
+          <section className="menu p-4 w-80 md:w-96 min-h-full bg-base-200 text-base-content">
             <div>
               {produits.map((produit, index) => {
                 return (
