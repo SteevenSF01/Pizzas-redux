@@ -1,7 +1,8 @@
 import React from "react";
 import LOGO from "./../../images/logo.png";
 import CART from "./../../images/cart.svg";
-import BaniereHome from "./../../images/baniereHome.jpg"; 
+import BaniereHome from "./../../images/baniereHome.jpg";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -11,7 +12,9 @@ export default function Navbar() {
         <div className="drawer-content flex items-center  py-2 px-5 ">
           <img src={LOGO} alt="" className="w-[30%] md:w-[7%] h-[100%] " />
           <ul className="ms-auto">
-            <li>Home</li>
+            <Link to="/Pizzas-redux/">
+              <li className="cursor-pointer">Home</li>
+            </Link>
           </ul>
           <label
             htmlFor="my-drawer"
@@ -33,6 +36,11 @@ export default function Navbar() {
             <li>
               <a>Sidebar Item 2</a>
             </li>
+            <Link to="/Pizzas-redux/Cart">
+              <button className="btn mt-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-full">
+                Payer Maintenant
+              </button>
+            </Link>
           </ul>
         </div>
       </div>

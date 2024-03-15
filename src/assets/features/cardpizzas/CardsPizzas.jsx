@@ -30,7 +30,7 @@ export default function CardsPizzas() {
                     {pizza.nom}
                   </h2>
                   <p className=" flex justify-end w-full items-center ">
-                    à partir de :{" "}
+                    Prix:
                     <span className="text-lg font-semibold">
                       &nbsp; {pizza.prix}
                     </span>
@@ -38,9 +38,11 @@ export default function CardsPizzas() {
                   </p>
                 </div>
                 <div className="py-2 px-2 flex justify-between gap-x-2">
-                  <button className="bg-[#e7e6e6] btn ">
-                    Ajouter au panier
-                  </button>
+                  <Link to={index == 6 ? "/Pizzas-redux/Personalisation/" : ""}>
+                    <button className="bg-[#e7e6e6] btn ">
+                      Ajouter au panier
+                    </button>
+                  </Link>
                   <Link to={`/Pizzas-redux/Details/${index}`} key={index}>
                     <button className="bg-[#e7e6e6] btn">Plus d'info</button>
                   </Link>

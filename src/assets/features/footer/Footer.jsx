@@ -13,9 +13,11 @@ export default function Footer() {
           <h1 className="text-2xl font-serif">Al Volo Pizza</h1>
         </aside>
         <aside>
-          <p className="text-[15px] font-semibold hover:underline cursor-pointer">
-            Home
-          </p>
+          <Link to="/Pizzas-redux/">
+            <p className="text-[15px] font-semibold hover:underline cursor-pointer">
+              Home
+            </p>
+          </Link>
         </aside>
         <nav>
           <h6 className="footer-title">Social media</h6>

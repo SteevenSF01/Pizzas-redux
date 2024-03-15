@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DATA from "./../../../pizza.json";
+import { Link } from "react-router-dom";
 
 export default function Details() {
   const { idPizza = 0 } = useParams();
@@ -9,7 +10,13 @@ export default function Details() {
 
   return (
     <>
-      <section className=" my-28 h-[500px] flex justify-center ">
+      <section className=" my-28 h-[500px] flex justify-center relative">
+      <Link to="/Pizzas-redux/">
+          <span className="absolute left-5 -top-20 size-16 text-[12px] font-serif rounded-full flex items-center justify-center text-gray-700 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+            Retour
+          </span>
+        </Link>
+
         <div className="shadow-[0_3px_10px_rgb(0,0,0,0.2)] overflow-hidden rounded-xl w-[65%] h-full flex justify-between">
           <div className="w-[48%] h-full   ">
             <img
