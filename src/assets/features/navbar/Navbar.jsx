@@ -11,15 +11,12 @@ import { Link } from "react-router-dom";
 
 //Redux
 import { useSelector, useDispatch } from "react-redux";
-import { ajoutQuantite } from "../cart/cartSlice";
+import { ajoutQuantite, suppQuantite, removeQuantite } from "../cart/cartSlice";
 
 export default function Navbar() {
   const produits = useSelector((state) => state.cart.produits);
   const dispatch = useDispatch();
 
-  const incrementQuantity = (product) => {
-    dispatch(ajoutQuantite(product));
-  };
 
   return (
     <>
@@ -81,11 +78,15 @@ export default function Navbar() {
                           +
                         </button>
                         <p className="mx-1">{produit.total}</p>
-                        <button className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                        <button 
+                        onClick={()=> dispatch(suppQuantite(produit))}
+                        className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                           -
                         </button>
                       </div>
-                        <button className="w-full h-[30px] mt-1 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                        <button 
+                        onClick={() => dispatch(removeQuantite(produit))}
+                        className="w-full h-[30px] mt-1 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                           <img
                             src={BIN}
                             alt="bin"
