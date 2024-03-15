@@ -37,7 +37,7 @@ export default function CardsPizzas() {
                     €
                   </p>
                 </div>
-                <div className="py-2 px-2 flex gap-x-2">
+                <div className="py-2 px-2 flex justify-between gap-x-2">
                   <button className="bg-[#e7e6e6] btn ">
                     Ajouter au panier
                   </button>

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CardsPizzas from "./assets/features/cardpizzas/CardsPizzas";
 import Details from "./assets/features/details/Details";
 import Layout from "./assets/features/layout/Layout";
+import Personalisation from "./assets/features/personalisation/Personalisation";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +19,10 @@ function App() {
         {
           path: "/Pizzas-redux/Details/:idPizza",
           element: <Details />
+        },
+        {
+          path: "/Pizzas-redux/Personalisation/:idPizza",
+          element: <Personalisation />
         }
       ],
     },

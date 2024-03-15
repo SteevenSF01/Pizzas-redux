@@ -1,17 +1,22 @@
 import React from "react";
-import Logo from './../../images/logo.png'
+import Logo from "./../../images/logo.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <>
       <footer className="footer px-10 py-7 bg-[#e7e6e6] text-black border-t-2 border-black rounded-tr-lg rounded-tl-lg mt-10">
         <aside>
-          <img src={Logo} alt="" className="w-[130px] h-[80px] " />
+          <Link to="/Pizzas-redux/">
+            <img src={Logo} alt="" className="w-[130px] h-[80px] " />
+          </Link>
           <h1 className="text-2xl font-serif">Al Volo Pizza</h1>
         </aside>
-          <aside>
-            <p className="text-[15px] font-semibold">Home</p>
-          </aside>
+        <aside>
+          <p className="text-[15px] font-semibold hover:underline cursor-pointer">
+            Home
+          </p>
+        </aside>
         <nav>
           <h6 className="footer-title">Social media</h6>
           <div className="grid grid-flow-col gap-4">
