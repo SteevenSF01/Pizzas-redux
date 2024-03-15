@@ -1,7 +1,7 @@
 import React from "react";
 import LOGO from "./../../images/logo.png";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Cart() {
   const produits = useSelector((state) => state.cart.produits);
