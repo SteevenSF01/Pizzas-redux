@@ -9,9 +9,10 @@ const cartSlice = createSlice({
     initialState,
     reducers : {
         ajoutPanier : (state, action) => {
-            const existingProductIndex = state.produits.findIndex(product => product.id === action.payload.id);
-            if (existingProductIndex !== -1) {
-                state.produits[existingProductIndex].total += 1;
+            const indexProduitExistant = state.produits.findIndex(product => product.id === action.payload.id);
+            if (indexProduitExistant !== -1) {
+                state.produits[indexProduitExistant].total += 1;
+                state.produits[indexProduitExistant].prixActuel += state.produits[indexProduitExistant].prix;
             } else {
                 state.produits.push(action.payload);
             }
@@ -20,12 +21,14 @@ const cartSlice = createSlice({
             const index = state.produits.findIndex(product => product.id === action.payload.id);
             if (index !== -1) {
                 state.produits[index].total += 1;
+                state.produits[index].prixActuel += state.produits[index].prix;
             }
         },
         suppQuantite: (state, action) => {
             const index = state.produits.findIndex(product => product.id === action.payload.id);
             if (index !== -1 && state.produits[index].total > 0) {
                 state.produits[index].total -= 1;
+                state.produits[index].prixActuel -= state.produits[index].prix;
             }
         },
         removeQuantite: (state, action) => {

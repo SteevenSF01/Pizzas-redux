@@ -68,7 +68,7 @@ export default function Navbar() {
                         {produit.nom}
                       </p>
                       <p className="capitalize text-[15px] font-serif">
-                        Prix: <span className="font-sans">{produit.prix}</span>€
+                        Prix: <span className="font-sans">{produit.prixActuel}</span>€
                       </p>
                       <div className="flex flex-wrap justify-center gap-x-2 items-center  mt-4 mb-2">
                         <button

@@ -17,8 +17,8 @@ export default function Cart() {
             Retour
           </span>
         </Link>
-        <div className="flex justify-center items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-[65%] rounded-tr-xl rounded-br-xl ">
-          <div className="w-[80%] h-[500px] rounded-tl-xl rounded-bl-xl py-2 px-5 border-e-2 border-black scrollBar-thumb overflow-y-auto" >
+        <div className="flex justify-center items-center flex-wrap md:flex-nowrap shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-full md:w-[65%] rounded-tr-xl rounded-br-xl ">
+          <div className="w-full md:w-[80%] h-[500px] rounded-tl-xl rounded-bl-xl py-2 px-5 border-e-2 border-black scrollBar-thumb overflow-y-auto" >
             {produits.map((produit, index) => {
               return (
                 <div
@@ -41,9 +41,12 @@ export default function Cart() {
                     <p className="capitalize text-[15px] font-serif">
                       {produit.nom}
                     </p>
+                    <div className="flex justify-between">
                     <p className="capitalize text-[15px] font-serif">
                       Prix: <span className="font-sans">{produit.prix}</span>€
                     </p>
+                    <p className="capitalize text-[15px] font-serif">Prix total: <span className="font-sans">{produit.prixActuel} </span>€</p>
+                    </div>
                     <div className="flex flex-wrap w-full justify-center gap-x-2 items-center  mt-4 mb-2">
                       <button
                         onClick={() => dispatch(ajoutQuantite(produit))}
@@ -77,9 +80,9 @@ export default function Cart() {
               );
             })}
           </div>
-          <div className="w-[40%] h-[500px] flex flex-col  rounded-tr-xl rounded-br-xl py-2 px-5">
+          <div className="w-[40%] my-10 md:my-0 md:h-[500px] flex flex-col  rounded-tr-xl rounded-br-xl py-2 px-5">
             <img src={LOGO} alt="" className="w-[80%] self-center " />
-            <p className="m-auto text-3xl text-gray-700 font-serif ">
+            <p className="m-auto text-xl md:text-3xl py-5 text-gray-700 font-serif ">
               Prix: <span></span>
             </p>
           </div>
