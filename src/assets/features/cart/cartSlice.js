@@ -24,11 +24,9 @@ const cartSlice = createSlice({
             }
         },
         removeQuantite: (state, action) => {
-            const index = state.produits.findIndex(product => product.id === action.payload.id);
-            if (index !== -1 ) {
-                state.produits[index].total = 0;
-            }
-        },
+            const productId = action.payload;
+            state.produits = state.produits.filter(product => product.id !== productId);
+        },    
     }
 });
 

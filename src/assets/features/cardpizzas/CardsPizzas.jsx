@@ -17,13 +17,13 @@ export default function CardsPizzas() {
         <option value="all" key="">All</option>
         {DATA.ingredients.map((ingredient, index)=> {
           return(
-            <option value={ingredient.nom} key={index}>{ingredient.nom} </option>
+            <option value={ingredient.nom} key={index} >{ingredient.nom} </option>
           )
         })}
-        <option value="" key="" disabled>- Par prix</option>
-        <option value="" key="">Prix croissant</option>
-        <option value="" key="">Prix décroissant</option>
-        <option value="" key="" disabled></option>
+        <option value=""  disabled>- Par prix</option>
+        <option value="" >Prix croissant</option>
+        <option value="" >Prix décroissant</option>
+        <option value=""  disabled></option>
       </select>
     </div>
       <section className="flex justify-center">

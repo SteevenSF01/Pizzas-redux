@@ -17,7 +17,6 @@ export default function Navbar() {
   const produits = useSelector((state) => state.cart.produits);
   const dispatch = useDispatch();
 
-
   return (
     <>
       <div className="drawer drawer-end w-full bg-[#e7e6e6] z-20 rounded-br-xl rounded-bl-xl border-b-2 border-black fixed mt-7 ">
@@ -72,27 +71,30 @@ export default function Navbar() {
                         Prix: <span className="font-sans">{produit.prix}</span>€
                       </p>
                       <div className="flex flex-wrap justify-center gap-x-2 items-center  mt-4 mb-2">
-                        <button 
-                        onClick={()=> dispatch(ajoutQuantite(produit))}
-                        className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                        <button
+                          onClick={() => dispatch(ajoutQuantite(produit))}
+                          className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+                        >
                           +
                         </button>
                         <p className="mx-1">{produit.total}</p>
-                        <button 
-                        onClick={()=> dispatch(suppQuantite(produit))}
-                        className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                        <button
+                          onClick={() => dispatch(suppQuantite(produit))}
+                          className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+                        >
                           -
                         </button>
                       </div>
-                        <button 
-                        onClick={() => dispatch(removeQuantite(produit))}
-                        className="w-full h-[30px] mt-1 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                          <img
-                            src={BIN}
-                            alt="bin"
-                            className="w-full h-full object-fill p-2"
-                          />
-                        </button>
+                      <button
+                        onClick={() => dispatch(removeQuantite(produit.id))}
+                        className="w-full h-[30px] mt-1 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+                      >
+                        <img
+                          src={BIN}
+                          alt="bin"
+                          className="w-full h-full object-fill p-2"
+                        />
+                      </button>
                     </article>
                   </div>
                 );
