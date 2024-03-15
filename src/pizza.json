@@ -3,49 +3,67 @@
     {
       "nom": "margherita",
       "ingredients": ["mozzarella", "sauce tomate"],
-      "description":"Pizza à base de pepperoni et mozarrella",
+      "description": "La 'Margherita' est une pizza italienne classique connue pour sa simplicité et ses saveurs fraîches. Cette délicieuse pizza est préparée avec une base de sauce tomate et recouverte de généreuses couches de mozzarella fraîche. La combinaison de la sauce tomate et du fromage mozzarella crée une harmonie parfaite de saveurs. C'est un choix parfait pour ceux qui apprécient les saveurs traditionnelles de la cuisine italienne.",
       "prix": 10,
       "image": "margherita.jpg"
     },
     {
       "nom": "olives",
-      "ingredients": ["olives", "poivrons", "sauce tomate" , "mozzarella"],
-      "description": "Olives vertes et noir, poivrons, mozzarella sur un base de sauce tomate",
+      "ingredients": ["olives", "poivrons", "sauce tomate", "mozzarella"],
+      "description": "La pizza 'Olives' est une délicieuse création méditerranéenne qui marie parfaitement les saveurs des olives vertes et noires, des poivrons et de la mozzarella. Sur une base de sauce tomate parfaitement assaisonnée, cette pizza offre une explosion de saveurs salées et sucrées. Les olives ajoutent une touche de richesse et de complexité, tandis que les poivrons apportent une douceur légèrement fumée. Le fromage mozzarella fondant complète ce festin pour les papilles.",
       "prix": 14,
       "image": "olives.jpg"
     },
     {
       "nom": "pepperoni",
-      "ingredients": ["pepperoni","mozzarella", "sauce tomate"],
-      "description" : "Pizza à base de pepperoni et mozarrella" ,
+      "ingredients": ["pepperoni", "mozzarella", "sauce tomate"],
+      "description": "La pizza 'Pepperoni' est une véritable explosion de saveurs pour les amateurs de viande. Avec sa base de sauce tomate savamment assaisonnée et sa généreuse couche de mozzarella fondante, cette pizza est garnie de tranches épicées de pepperoni. Chaque bouchée offre un mélange irrésistible de viande juteuse et de fromage fondu. La pizza 'Pepperoni' est un choix classique et réconfortant qui plaira à tous ceux qui apprécient les saveurs audacieuses et épicées.",
       "prix": 12,
       "image": "pepperoni.jpg"
     },
     {
       "nom": "barbecue",
-      "ingredients": [ "boeuf", "cornichon", "oignon" , "mozzarella" , "sauce barbecue"],
-      "description": "Double portion de viande de boeuf épicée, tranches de cornichon, oignons rouges, mozzarella et sauce barbecue",
+      "ingredients": [
+        "boeuf",
+        "cornichon",
+        "oignon",
+        "mozzarella",
+        "sauce barbecue"
+      ],
+      "description": "La pizza 'Barbecue' est une création savoureuse qui ravira les amateurs de viande et de saveurs fumées. Cette pizza généreusement garnie comprend une double portion de viande de bœuf épicée, des tranches de cornichon croquant, des oignons rouges caramélisés, de la mozzarella fondante et une généreuse couche de sauce barbecue. Chaque bouchée offre un mélange irrésistible de saveurs riches et équilibrées, avec un contraste délicieux entre la tendreté de la viande, le croquant des cornichons et l'arôme fumé de la sauce barbecue.",
       "prix": 15,
       "image": "bbq.jpg"
     },
     {
       "nom": "4 fromages",
-      "ingredients": ["emmental" , "fromage chevre" , "camembert" , "mozzarella", "sauce tomate"],
-      "description": "Emmental, fromage de chèvre, camembert, mozzarella et crème épaisse",
+      "ingredients": [
+        "emmental",
+        "fromage chevre",
+        "camembert",
+        "mozzarella",
+        "sauce tomate"
+      ],
+      "description": "La pizza '4 fromages' est une véritable ode à la richesse et à la diversité des fromages. Sur une base de sauce tomate savoureuse, cette pizza est un festival de saveurs lactées. Elle est recouverte d'un mélange harmonieux de quatre fromages distincts : l'emmental, avec sa texture fondante et son goût délicat, le fromage de chèvre, apportant une touche de caractère et de crémeux, le camembert, offrant une douceur veloutée, et enfin la mozzarella, fondue à la perfection pour une onctuosité irrésistible.",
       "prix": 13,
       "image": "4fromages.jpg"
     },
     {
-      "nom": "piment",
-      "ingredients":["poulet" , "poivrons", "oignon", "mozzarella", "sauce barbecue" ],
-      "description" :"Dés de poulet grillé, poivrons verts, oignons rouges, mozzarella et sauce barbecue",
+      "nom": "barbecue chicken",
+      "ingredients": [
+        "poulet",
+        "poivrons",
+        "oignon",
+        "mozzarella",
+        "sauce barbecue"
+      ],
+      "description": "La pizza 'Barbecue Chicken' est une création irrésistible qui marie habilement la tendreté du poulet grillé aux saveurs fumées de la sauce barbecue. Sur une base de sauce tomate, cette pizza est garnie de dés de poulet grillé juteux, de poivrons verts croquants et d'oignons rouges caramélisés. Le tout est recouvert d'une généreuse couche de mozzarella fondante qui lie tous les ingrédients ensemble.",
       "prix": 15,
       "image": "barbecuechicken.jpg"
     },
     {
       "nom": "pick & mix",
-      "ingredients": "??? ",
-      "description": "Devenez le chef cuisto et composez votre pizza: sauce tomate, mozzarella +3 garnitures au choix.",
+      "ingredients": " ",
+      "description": "La pizza 'Pick & Mix' vous offre la possibilité de devenir le chef de votre propre pizza. Avec une base de sauce tomate et une généreuse couche de mozzarella fondante, cette pizza est votre toile vierge pour créer votre propre chef-d'œuvre culinaire. Ajoutez vos garnitures préférées parmi une sélection variée, allant des légumes frais aux viandes savoureuses, en passant par les fromages aromatiques et les herbes fraîches.",
       "prix": 11,
       "image": "pickandmix.jpg"
     }
