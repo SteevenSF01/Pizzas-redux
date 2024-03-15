@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CardsPizzas from "./assets/features/cardpizzas/CardsPizzas";
 import Details from "./assets/features/details/Details";
 import Layout from "./assets/features/layout/Layout";
+import Cart from "./assets/features/cart/Cart";
 import Personalisation from "./assets/features/personalisation/Personalisation";
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
         {
           path: "/Pizzas-redux/Personalisation/",
           element: <Personalisation />
+        },
+        {
+          path: "/Pizzas-redux/Cart/",
+          element: <Cart />
         }
       ],
     },
