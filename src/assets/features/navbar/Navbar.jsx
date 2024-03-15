@@ -10,7 +10,9 @@ export default function Navbar() {
       <div className="drawer drawer-end w-full bg-[#e7e6e6] z-20 rounded-br-xl rounded-bl-xl border-b-2 border-black fixed mt-7 ">
         <input id="my-drawer" type="checkbox" className="drawer-toggle " />
         <div className="drawer-content flex items-center  py-2 px-5 ">
-          <img src={LOGO} alt="" className="w-[30%] md:w-[7%] h-[100%] " />
+          <Link to="/Pizzas-redux/" className="w-full">
+            <img src={LOGO} alt="" className="w-[50%] md:w-[7%] h-[100%] " />
+          </Link>
           <ul className="ms-auto">
             <Link to="/Pizzas-redux/">
               <li className="cursor-pointer">Home</li>
@@ -32,9 +34,6 @@ export default function Navbar() {
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
             <li>
               <a>Sidebar Item 1</a>
-            </li>
-            <li>
-              <a>Sidebar Item 2</a>
             </li>
             <Link to="/Pizzas-redux/Cart">
               <button className="btn mt-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-full">
