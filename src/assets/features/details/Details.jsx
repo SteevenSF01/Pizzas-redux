@@ -23,7 +23,7 @@ export default function Details() {
           </div>
           <div className="w-[50%] h-full py-10 px-4 ">
             <h1 className="text-4xl font-serif text-gray-700 capitalize">
-              {pizza.nom}{" "}
+              {pizza.nom}
             </h1>
             <p className="text-xl mt-5 text-gray-700 capitalize">
               description : <br />

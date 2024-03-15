@@ -1,7 +1,7 @@
 import React from "react";
 import LOGO from "./../../images/logo.png";
 import CART from "./../../images/cart.svg";
-import BaniereHome from "./../../images/baniereHome.jpg"; // Importa la imagen de fondo
+import BaniereHome from "./../../images/baniereHome.jpg"; 
 
 export default function Navbar() {
   return (

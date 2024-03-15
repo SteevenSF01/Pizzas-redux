@@ -62,7 +62,7 @@
     },
     {
       "nom": "pick & mix",
-      "ingredients": " ",
+      "ingredients": ["Les garnitures de votre choix parmis une selection"],
       "description": "La pizza 'Pick & Mix' vous offre la possibilité de devenir le chef de votre propre pizza. Avec une base de sauce tomate et une généreuse couche de mozzarella fondante, cette pizza est votre toile vierge pour créer votre propre chef-d'œuvre culinaire. Ajoutez vos garnitures préférées parmi une sélection variée, allant des légumes frais aux viandes savoureuses, en passant par les fromages aromatiques et les herbes fraîches.",
       "prix": 11,
       "image": "pickandmix.jpg"
