@@ -2,9 +2,12 @@ import React from "react";
 import LOGO from "./../../images/logo.png";
 import CART from "./../../images/cart.svg";
 import BaniereHome from "./../../images/baniereHome.jpg";
+import BIN from "./../../images/bin.svg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
+  const produits = useSelector((state) => state.cart.produits);
   return (
     <>
       <div className="drawer drawer-end w-full bg-[#e7e6e6] z-20 rounded-br-xl rounded-bl-xl border-b-2 border-black fixed mt-7 ">
@@ -31,16 +34,60 @@ export default function Navbar() {
             aria-label="close sidebar"
             className="drawer-overlay w-[98%] "
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            <li>
-              <a>Sidebar Item 1</a>
-            </li>
+          <section className="menu p-4 w-96 min-h-full bg-base-200 text-base-content">
+            <div>
+              {produits.map((produit, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="w-[100%] h-fit border-2 flex my-3 rounded-lg overflow-hidden"
+                  >
+                    <div className="w-[45%] h-full">
+                      <img
+                        src={
+                          new URL(
+                            `/src/assets/images/${produit.image}`,
+                            import.meta.url
+                          ).href
+                        }
+                        alt=""
+                        className="h-[100%] w-[100%] "
+                      />
+                    </div>
+                    <article className="w-[55%] p-3 ">
+                      <p className="capitalize text-[15px] font-serif">
+                        {produit.nom}
+                      </p>
+                      <p className="capitalize text-[15px] font-serif">
+                        Prix: <span className="font-sans">{produit.prix}</span>€
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-x-2 items-center  mt-4 mb-2">
+                        <button className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                          -
+                        </button>
+                        <p className="mx-1">0</p>
+                        <button className="w-[30px] h-[30px] rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                          +
+                        </button>
+                      </div>
+                        <button className="w-full h-[30px] mt-1 rounded-xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+                          <img
+                            src={BIN}
+                            alt="bin"
+                            className="w-full h-full object-fill p-2"
+                          />
+                        </button>
+                    </article>
+                  </div>
+                );
+              })}
+            </div>
             <Link to="/Pizzas-redux/Cart">
               <button className="btn mt-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-full">
                 Payer Maintenant
               </button>
             </Link>
-          </ul>
+          </section>
         </div>
       </div>
       <div className="h-[600px] bg-no-repeat bg-cover mt-[-2rem] flex justify-center items-center relative">

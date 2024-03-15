@@ -48,7 +48,7 @@ export default function CardsPizzas() {
                   </p>
                 </div>
                 <div className="py-2 px-2 flex justify-between gap-x-2">
-                  <Link to={index == 6 ? "/Pizzas-redux/Personalisation/" : ""}>
+                  <Link to={index == 6 ? "/Pizzas-redux/Personalisation/": "/Pizzas-redux/"}>
                     <button
                       onClick={() => dispatch(ajoutPanier(pizza))}
                       className="bg-[#e7e6e6] btn "
