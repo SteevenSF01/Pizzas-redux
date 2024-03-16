@@ -5,6 +5,7 @@ import Details from "./assets/features/details/Details";
 import Layout from "./assets/features/layout/Layout";
 import Cart from "./assets/features/cart/Cart";
 import Personalisation from "./assets/features/personalisation/Personalisation";
+import Paiment from "./assets/features/paiement/Paiment";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
         {
           path: "/Pizzas-redux/Cart/",
           element: <Cart />
+        },
+        {
+          path: "/Pizzas-redux/Paiement/",
+          element: <Paiment />
         }
       ],
     },

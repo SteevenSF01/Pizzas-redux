@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PICK from "./../../images/pickandmix.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import { modifierIngredient } from "./personalisationSlice"; // Importar la acción ajoutPanier
+import { modifierIngredient } from "./personalisationSlice";
 import { ajoutPanier } from "../cart/cartSlice";
 
 export default function Personalisation() {
@@ -43,9 +43,10 @@ export default function Personalisation() {
             Retour
           </span>
         </Link>
-        <h2 className="my-10 text-2xl font-serif text-gray-700">
+        <h2 className="mt-10 mb-5 text-2xl font-serif text-gray-700">
           Liste des ingrédients :
         </h2>
+        <p className="text-[15px] text-center mb-5 w-[50%] ">Ajoutez vos garnitures préférées parmi une sélection variée, allant des légumes frais aux viandes savoureuses, en passant par les fromages aromatiques et les herbes fraîches.</p>
         <div className="w-[80%] shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-5 rounded-xl flex justify-between  flex-wrap lg:flex-nowrap">
           <ul className="w-full flex flex-col gap-y-2">
             {ingredients.map((ingredient) => (

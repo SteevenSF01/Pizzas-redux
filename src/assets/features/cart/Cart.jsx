@@ -9,7 +9,10 @@ import "./cart.css";
 export default function Cart() {
   const dispatch = useDispatch();
   const produits = useSelector((state) => state.cart.produits);
-  const prixTotal = produits.reduce((total, produit) => total + produit.prixActuel, 0);
+  const prixTotal = produits.reduce(
+    (total, produit) => total + produit.prixActuel,
+    0
+  );
 
   return (
     <>
@@ -25,9 +28,9 @@ export default function Cart() {
               return (
                 <div
                   key={index}
-                  className="w-[85%] h-[170px]  border-2 flex my-3 rounded-lg overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)]" 
+                  className="w-[85%] h-[190px]  border-2 flex my-3 rounded-lg overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
                 >
-                  <div className="w-[40%] h-full rounded-tr-xl rounded-br-xl overflow-hidden" >
+                  <div className="w-[40%] h-full rounded-tr-xl rounded-br-xl overflow-hidden">
                     <img
                       src={
                         new URL(
@@ -85,10 +88,24 @@ export default function Cart() {
               );
             })}
           </div>
-          <div className="w-[40%] my-10 md:my-0 md:h-[500px] flex flex-col  rounded-tr-xl rounded-br-xl py-2 px-5">
+          <div className="w-[40%] my-10 md:my-0 md:h-[500px] flex flex-col items-center justify-center rounded-tr-xl rounded-br-xl py-2 px-5">
             <img src={LOGO} alt="" className="w-[80%] self-center " />
-            <p className="m-auto text-xl md:text-3xl py-5 text-gray-700 font-serif ">
-              Prix: <span>{prixTotal}€</span>
+            <p className=" text-xl md:text-3xl py-5 text-gray-700 font-serif flex flex-col items-center " >
+              A payer: <span className="font-sans font-normal">{prixTotal}€</span>
+              {produits.length === 0 ? (
+                <button
+                  className="btn my-5 bg-[#e7e6e6] font-sans px-16 text-lg"
+                  disabled={produits.length === 0}
+                >
+                  Payer
+                </button>
+              ) : (
+                <Link to="/Pizzas-redux/Paiement/">
+                  <button className="btn my-5 bg-[#e7e6e6] font-sans px-16 text-lg">
+                    Payer
+                  </button>
+                </Link>
+              )}
             </p>
           </div>
         </div>
