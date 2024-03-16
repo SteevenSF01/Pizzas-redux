@@ -9,21 +9,29 @@ export default function CardsPizzas() {
 
   return (
     <>
-    <div className="flex items-center mt-5 ms-5 gap-3">
-      <label htmlFor="ingredients" className="font-serif">Filtre: </label>
-      <select name="" id="" className="rounded-lg px-5 py-1 border-2">
-        <option value="all" key="">All</option>
-        {DATA.ingredients.map((ingredient, index)=> {
-          return(
-            <option value={ingredient.nom} key={index} >{ingredient.nom} </option>
-          )
-        })}
-        <option value=""  disabled>- Par prix</option>
-        <option value="" >Prix croissant</option>
-        <option value="" >Prix décroissant</option>
-        <option value=""  disabled></option>
-      </select>
-    </div>
+      <div className="flex items-center mt-5 ms-5 gap-3">
+        <label htmlFor="ingredients" className="font-serif">
+          Filtre:{" "}
+        </label>
+        <select name="" id="" className="rounded-lg px-5 py-1 border-2">
+          <option value="all" key="">
+            All
+          </option>
+          {DATA.ingredients.map((ingredient, index) => {
+            return (
+              <option value={ingredient.nom} key={index}>
+                {ingredient.nom}{" "}
+              </option>
+            );
+          })}
+          <option value="" disabled>
+            - Par prix
+          </option>
+          <option value="">Prix croissant</option>
+          <option value="">Prix décroissant</option>
+          <option value="" disabled></option>
+        </select>
+      </div>
       <section className="flex justify-center">
         <div className="flex flex-wrap w-[60%] justify-center gap-x-10 gap-y-6 mt-10 text-gray-700">
           {DATA.pizzas.map((pizza, index) => {
@@ -60,9 +68,17 @@ export default function CardsPizzas() {
                   </p>
                 </div>
                 <div className="py-2 px-2 flex justify-between gap-x-2">
-                  <Link to={index == 6 ? "/Pizzas-redux/Personalisation/": "/Pizzas-redux/"}>
+                  <Link
+                    to={
+                      index == 6
+                        ? "/Pizzas-redux/Personalisation/"
+                        : "/Pizzas-redux/"
+                    }
+                  >
                     <button
-                      onClick={() => dispatch(ajoutPanier(pizza))}
+                      onClick={
+                        pizza.id === 7 ? null : () => dispatch(ajoutPanier(pizza))
+                      }
                       className="bg-[#e7e6e6] btn "
                     >
                       Ajouter au panier
@@ -80,5 +96,3 @@ export default function CardsPizzas() {
     </>
   );
 }
-
-

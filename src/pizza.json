@@ -8,7 +8,7 @@
       "prixActuel": 10,
       "image": "margherita.jpg",
       "total": 1,
-      "id":1
+      "id": 1
     },
     {
       "nom": "olives",
@@ -18,7 +18,7 @@
       "prixActuel": 14,
       "image": "olives.jpg",
       "total": 1,
-      "id":2
+      "id": 2
     },
     {
       "nom": "pepperoni",
@@ -28,7 +28,7 @@
       "prixActuel": 12,
       "image": "pepperoni.jpg",
       "total": 1,
-      "id":3
+      "id": 3
     },
     {
       "nom": "barbecue",
@@ -60,7 +60,7 @@
       "prixActuel": 13,
       "image": "4fromages.jpg",
       "total": 1,
-      "id" :5
+      "id": 5
     },
     {
       "nom": "barbecue chicken",
@@ -76,7 +76,7 @@
       "prixActuel": 15,
       "image": "barbecuechicken.jpg",
       "total": 1,
-      "id":6
+      "id": 6
     },
     {
       "nom": "pick & mix",
@@ -86,61 +86,100 @@
       "prixActuel": 11,
       "image": "pickandmix.jpg",
       "total": 1,
-      "id":7
+      "id": 7
     }
   ],
   "ingredients": [
     {
       "nom": "Mozzarella",
-      "prix": 0.5
+      "prix": 0.5,
+      "id": 1,
+      "total": 0,
+      "prixActuel": 0.5
     },
     {
       "nom": "Sauce Tomate",
-      "prix": 1
+      "prix": 1,
+      "id": 2,
+      "total": 0,
+      "prixActuel": 1
     },
     {
       "nom": "Olives",
-      "prix": 1.5
+      "prix": 1.5,
+      "id": 3,
+      "total": 0,
+      "prixActuel": 1.5
     },
     {
       "nom": "Poivrons",
-      "prix": 1
+      "prix": 1,
+      "id": 4,
+      "total": 0,
+      "prixActuel": 1
     },
     {
       "nom": "Pepperoni",
-      "prix": 2
+      "prix": 2,
+      "id": 5,
+      "total": 0,
+      "prixActuel": 2
     },
     {
       "nom": "Boeuf",
-      "prix": 1.5
+      "prix": 1.5,
+      "id": 6,
+      "total": 0,
+      "prixActuel": 1.5
     },
     {
       "nom": "Cornichon",
-      "prix": 0.8
+      "prix": 0.8,
+      "id": 7,
+      "total": 0,
+      "prixActuel": 0.8
     },
     {
       "nom": "Oignon",
-      "prix": 0.5
+      "prix": 0.5,
+      "id": 8,
+      "total": 0,
+      "prixActuel": 0.5
     },
     {
       "nom": "Sauce Barbecue",
-      "prix": 1.8
+      "prix": 1.8,
+      "id": 9,
+      "total": 0,
+      "prixActuel": 1.8
     },
     {
       "nom": "Emmental",
-      "prix": 1.5
+      "prix": 1.5,
+      "id": 10,
+      "total": 0,
+      "prixActuel": 1.5
     },
     {
       "nom": "Fromage Chevre",
-      "prix": 2
+      "prix": 2,
+      "id": 11,
+      "total": 0,
+      "prixActuel": 2
     },
     {
       "nom": "Camembert",
-      "prix": 2.5
+      "prix": 2.5,
+      "id": 12,
+      "total": 0,
+      "prixActuel": 2.5
     },
     {
       "nom": "Poulet",
-      "prix": 1.5
+      "prix": 1.5,
+      "id": 13,
+      "total": 0,
+      "prixActuel": 1.5
     }
   ]
 }

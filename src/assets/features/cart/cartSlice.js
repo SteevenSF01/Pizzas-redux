@@ -30,7 +30,10 @@ const cartSlice = createSlice({
                 state.produits[index].total -= 1;
                 state.produits[index].prixActuel -= state.produits[index].prix;
             }
-        },
+            if (state.produits[index].total === 0) {
+                state.produits = state.produits.filter(product => product.id !== action.payload.id);
+            }
+        },                
         removeQuantite: (state, action) => {
             const productId = action.payload;
             state.produits = state.produits.filter(product => product.id !== productId);
