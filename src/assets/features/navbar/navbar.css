@@ -1,0 +1,16 @@
+.scrollBar-thumb {
+    scrollbar-color: #9e9d9d;
+}
+
+.scrollBar-thumb::-webkit-scrollbar {
+    width: 8px ;
+}
+
+.scrollBar-thumb::-webkit-scrollbar-thumb {
+    border-radius: 9999px ;
+    background-color: #9e9d9d ; 
+}
+
+.scrollBar-thumb::-webkit-scrollbar-track {
+    background-color: transparent ;
+}

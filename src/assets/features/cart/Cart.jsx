@@ -18,14 +18,14 @@ export default function Cart() {
           </span>
         </Link>
         <div className="flex justify-center items-center flex-wrap md:flex-nowrap shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-full md:w-[65%] rounded-tr-xl rounded-br-xl ">
-          <div className="w-full md:w-[80%] h-[500px] rounded-tl-xl rounded-bl-xl py-2 px-5 border-e-2 border-black scrollBar-thumb overflow-y-auto">
+          <div className="w-full md:w-[80%] h-[500px] rounded-tl-xl rounded-bl-xl py-2 px-5 scrollBar-thumb overflow-y-auto flex flex-wrap justify-center">
             {produits.map((produit, index) => {
               return (
                 <div
                   key={index}
-                  className="w-[100%] h-[170px]  border-2 flex my-3 rounded-lg overflow-hidden"
+                  className="w-[85%] h-[170px]  border-2 flex my-3 rounded-lg overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)]" 
                 >
-                  <div className="w-[35%] h-full">
+                  <div className="w-[40%] h-full rounded-tr-xl rounded-br-xl overflow-hidden" >
                     <img
                       src={
                         new URL(
@@ -37,7 +37,7 @@ export default function Cart() {
                       className="h-[100%] w-[100%] "
                     />
                   </div>
-                  <article className="w-[70%] p-3 ">
+                  <article className="w-[60%] p-3 ">
                     <p className="capitalize text-[15px] font-serif">
                       {produit.nom}
                     </p>

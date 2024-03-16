@@ -2,11 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import DATA from "./../../../pizza.json";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { ajoutPanier } from "../cart/cartSlice";
 
 export default function Details() {
   const { idPizza = 0 } = useParams();
 
   const pizza = DATA.pizzas[idPizza];
+
+  const dispatch = useDispatch()
 
   return (
     <>
@@ -47,7 +51,7 @@ export default function Details() {
             <p className="mt-5 text-xl text-gray-700 font-serif">
               Prix : <span className="text-black"> {pizza.prix} €</span>
             </p>
-            <button className="btn bg-[#e7e6e6] mt-10 float-right">
+            <button onClick={()=> dispatch(ajoutPanier(pizza))} className="btn bg-[#e7e6e6] mt-10 float-right">
               Ajouter au panier
             </button>
           </div>

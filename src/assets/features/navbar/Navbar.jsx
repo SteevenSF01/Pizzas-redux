@@ -1,4 +1,5 @@
 import React from "react";
+import './navbar.css'
 
 // images
 import LOGO from "./../../images/logo.png";
@@ -17,9 +18,11 @@ export default function Navbar() {
   const produits = useSelector((state) => state.cart.produits);
   const dispatch = useDispatch();
 
+  const totalPizzas = produits.reduce((total, produit) => total + produit.total, 0);
+
   return (
     <>
-      <div className="drawer drawer-end w-full bg-[#e7e6e6] z-20 rounded-br-xl rounded-bl-xl border-b-2 border-black fixed mt-7 ">
+      <div className="drawer drawer-end w-full bg-[#e7e6e6] z-20 rounded-br-xl rounded-bl-xl border-b-2 border-gray-500 fixed mt-7 ">
         <input id="my-drawer" type="checkbox" className="drawer-toggle " />
         <div className="drawer-content flex items-center  py-2 px-5 ">
           <Link to="/Pizzas-redux/" className="w-full">
@@ -32,18 +35,19 @@ export default function Navbar() {
           </ul>
           <label
             htmlFor="my-drawer"
-            className="btn bg-transparent border-none drawer-button shadow-xl  w-[50px] ms-5 "
+            className="btn bg-transparent border-none drawer-button shadow-xl  w-[50px] ms-5 relative "
           >
             <img src={CART} alt="" className="w-[100%] " />
+            <p className="absolute size-6 bg-[#e7e6e6] rounded-full flex justify-center items-center -bottom-2 -right-2 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">{totalPizzas}</p>
           </label>
         </div>
-        <div className="drawer-side over ">
+        <div className="drawer-side over scrollBar-thumb ">
           <label
             htmlFor="my-drawer"
             aria-label="close sidebar"
             className="drawer-overlay w-[98%] "
           ></label>
-          <section className="menu p-4 w-80 md:w-96 min-h-full bg-base-200 text-base-content">
+          <section className="menu p-4 w-80 md:w-96 min-h-full bg-base-200 text-base-content " >
             <div>
               {produits.map((produit, index) => {
                 return (

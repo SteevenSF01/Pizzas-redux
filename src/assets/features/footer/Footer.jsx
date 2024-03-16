@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="footer px-10 py-7 bg-[#e7e6e6] text-black border-t-2 border-black rounded-tr-lg rounded-tl-lg mt-10">
+      <footer className="footer px-10 py-7 bg-[#e7e6e6] text-black border-t-2 border-gray-500 rounded-tr-lg rounded-tl-lg mt-10">
         <aside>
           <Link to="/Pizzas-redux/">
             <img src={Logo} alt="" className="w-[130px] h-[80px] " />
@@ -59,7 +59,7 @@ export default function Footer() {
         </nav>
       </footer>
       <footer className="footer footer-center p-4 bg-base-300 text-base-content">
-        <aside className="border-t-2 border-black w-full pt-2">
+        <aside className="border-t-2 border-gray-500 w-full pt-2">
           <p>Copyright © 2024 - All right reserved by Al Volo Pizza</p>
         </aside>
       </footer>
