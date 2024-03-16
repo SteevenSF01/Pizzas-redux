@@ -2,13 +2,15 @@ import React from "react";
 import LOGO from "./../../images/logo.png";
 import BIN from "./../../images/bin.svg";
 import { Link } from "react-router-dom";
-import { ajoutQuantite, removeQuantite } from "./cartSlice";
+import { ajoutQuantite, removeQuantite, suppQuantite } from "./cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "./cart.css";
 
 export default function Cart() {
   const dispatch = useDispatch();
   const produits = useSelector((state) => state.cart.produits);
+  const prixTotal = produits.reduce((total, produit) => total + produit.prixActuel, 0);
+
   return (
     <>
       <section className=" my-20 relative">
@@ -86,7 +88,7 @@ export default function Cart() {
           <div className="w-[40%] my-10 md:my-0 md:h-[500px] flex flex-col  rounded-tr-xl rounded-br-xl py-2 px-5">
             <img src={LOGO} alt="" className="w-[80%] self-center " />
             <p className="m-auto text-xl md:text-3xl py-5 text-gray-700 font-serif ">
-              Prix: <span></span>
+              Prix: <span>{prixTotal}€</span>
             </p>
           </div>
         </div>
